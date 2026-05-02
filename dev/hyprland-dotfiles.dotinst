@@ -1,12 +1,12 @@
 {
 	"name": "ML4W OS - Dotfiles for Hyprland (DEV)",
-	"id": "com.ml4w.dotfiles.dev",
+	"id": "fmuse03.dotfiles.dev",
 	"description": "Advanced configuration for the dynamic tiling window manager Hyprland",
 	"version":"2.12.2",
 	"author": "Stephan Raabe",
-	"homepage": "https://ml4w.com/os/",
-	"dependencies": "https://ml4w.com/os/getting-started/dependencies",
-	"source": "$HOME/Projects/dotfiles",
+	"homepage": "https://github.com/fmuse03/ml4w-dotfiles",
+	"dependencies": "https://github.com/fmuse03/ml4w-dotfiles/tree/main/setup/dependencies",
+	"source": "..",
 	"subfolder": "dotfiles",
 	"setupscript":"setup/setup.sh",
 	"restore":[
