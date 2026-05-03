@@ -1,0 +1,80 @@
+[alias]
+	a = add
+	adq = a .
+	b = branch
+	bcur = rev-parse --abbrev-ref HEAD
+	c = commit
+	ca = c --amend
+	can = ca --no-edit
+	cm = c -m
+	c0 = cm \"init\"
+	ch = checkout
+	cp = cherry-pick
+	cpa = cherry-pick --abort
+	cpc = cherry-pick --continue
+	cps = cherry-pick --skip
+	d = diff
+	ds = d --staged
+	dc = "!git ds --check | grep conflict | more"
+	ac = "!git ad && git dc"
+	conflict = dc
+	f = fetch
+	l = log --oneline --decorate --graph
+	ll = log
+	p = push
+	pb = "!git p origin \"$(git bcur)\""
+	pf = p --force-with-lease
+	r = reset
+	r1 = reset HEAD~1
+	rd = r .
+	rb = rebase
+	rba = rb --abort
+	rbc = rb --continue
+	rbcn = -c core.editor=true rb --continue
+	rbe = rb --edit-todo
+	rbi = rb -i
+	rbs = rb --skip
+	rt = rev-parse --show-toplevel
+	artq = "!git -C \"$(git rt)\" adq"
+	crt = "!cd \"$(git rt)\""
+	cwip = "!git artq && git cm \"wip\""
+	s = stash
+	sa = s apply
+	save = "!git s store -m \"save: $1\" "$(git s create)" #"
+	sl = s list
+	sp = s pop
+	srt = "!git artq && git s"
+	st = status -s
+	ad = "!git adq && git st"
+	addd = ad
+	tagcm = rev-list -n 1
+	w = worktree
+	wl = w list
+	wroot = "!git w --porcelain | rg '^worktree .*/.bare$' | head -n 1 | sed 's:^worktree ::; s:/.bare$::'"
+[core]
+	editor = helix
+[diff]
+	tool = meld
+[difftool]
+    prompt = false
+[difftool "meld"]
+    cmd = meld "$LOCAL" "$REMOTE"
+[difftool "vscode"]
+	cmd = code --wait --diff $LOCAL $REMOTE
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[init]
+	defaultBranch = main
+[merge]
+    tool = meld
+[mergetool "meld"]
+    cmd = meld "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED"
+
+[fetch]
+	writeCommitGraph = true
+
+[include]
+	path = "~/.gitcred.gitconfig"
