@@ -22,7 +22,7 @@
     ],
     // Modules Center
     "modules-center": [
-        "clock",
+        "custom/clock",
         "custom/empty"
     ],
     // Modules Right    

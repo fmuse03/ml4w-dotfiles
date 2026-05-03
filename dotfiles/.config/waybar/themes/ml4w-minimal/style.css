@@ -340,7 +340,8 @@ window#waybar.empty #window {
  * Clock
  * ----------------------------------------------------- */
 
-#clock {
+#clock,
+#custom-clock {
     font-size: 15px;
     color: @textcolor;
     margin: 0px 15px 0px 0px;

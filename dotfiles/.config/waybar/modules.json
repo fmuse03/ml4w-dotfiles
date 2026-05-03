@@ -221,11 +221,10 @@
     "spacing": 10
   },
   // Clock
-  "clock": {
-    "format": "{:%H:%M %a}",
+  "custom/clock": {
+    "exec": "date +'%b %-d | %H:%M'",
+    "interval": 1,
     "on-click": "qs ipc call calendar toggle",
-    "timezone": "",
-    "tooltip": false
   },
   // System
   "custom/system": {

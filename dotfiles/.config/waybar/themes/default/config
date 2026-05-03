@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces","custom/waybarthemes"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["custom/ml4w-welcome","mpd", "idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "sway/language", "battery", "battery#bat2", "clock", "tray"],
+    "modules-right": ["custom/ml4w-welcome","mpd", "idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "sway/language", "battery", "battery#bat2", "custom/clock", "tray"],
     // Modules configuration
     "keyboard-state": {
         "numlock": true,
@@ -77,7 +77,7 @@
     "tray": {
         "spacing": 10
     },
-    "clock": {
+    "custom/clock": {
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"

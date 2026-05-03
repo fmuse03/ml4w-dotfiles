@@ -260,12 +260,14 @@ color:@on_error;
  * Clock
  * ----------------------------------------------------- */
 
-#clock {
+#clock,
+#custom-clock {
 margin-left: 12px;
 margin-right: 12px;
 }
 
-#clock:hover {
+#clock,
+#custom-clock:hover {
 }
 
 /* -----------------------------------------------------

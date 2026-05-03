@@ -37,6 +37,6 @@
         "custom/notification",
         "custom/exit",
         "custom/ml4w-welcome",
-        "clock"
+        "custom/clock"
     ]
 }

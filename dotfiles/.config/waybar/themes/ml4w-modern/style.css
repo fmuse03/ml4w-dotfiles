@@ -386,7 +386,8 @@ window#waybar.empty #window {
  * Clock
  * ----------------------------------------------------- */
 
-#clock {
+#clock,
+#custom-clock {
     background-color: @background;
     font-size: 16px;
     color: @on_surface;
@@ -397,7 +398,8 @@ window#waybar.empty #window {
     transition: all 0.3s ease-out;    
 }
 
-#clock:hover {
+#clock,
+#custom-clock:hover {
     color: @on_surface;
     background: @primary_container;
     border-color: @primary;

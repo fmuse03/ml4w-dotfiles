@@ -68,7 +68,7 @@
         "group/hardware",
         "group/tools",
         "custom/exit",
-        "clock",
+        "custom/clock",
         "tray",
         "custom/notification",
         "custom/ml4w-welcome"
