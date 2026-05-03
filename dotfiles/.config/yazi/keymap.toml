@@ -1,0 +1,25 @@
+[[mgr.prepend_keymap]]
+on   = "!"
+for  = "unix"
+run  = 'shell "$SHELL" --block'
+desc = "Open $SHELL here"
+
+[[mgr.prepend_keymap]]
+on   = "<C-g>"
+run  = 'shell -- rofi -theme fullscreen-preview -show filebrowser -filebrowser-command "ya emit reveal" -filebrowser-directory "$(pwd)"'
+desc = "Grid view"
+
+[[mgr.prepend_keymap]]
+on   = "<C-n>"
+run  = 'shell -- dragon-drop -T -a -i -x %s'
+desc = 'Drag & Drop'
+
+[[mgr.prepend_keymap]]
+on   = "Y"
+run  = 'shell -- for path in "$@"; do echo "file://$path"; done | wl-copy -t text/uri-list'
+desc = 'yank to clipboard'
+
+[[mgr.prepend_keymap]]
+on   = [ "g", "r" ]
+run  = 'shell -- ya emit cd "$(git rev-parse --show-toplevel)"'
+desc = 'cd git root'
