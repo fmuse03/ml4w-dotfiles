@@ -13,14 +13,18 @@
     "on-click": "activate",
     "active-only": false,
     "all-outputs": true,
-    "format": "{}",
+    "format": " {name} / {windows}",
     "format-icons": {
       "urgent": "",
       "active": "",
       "default": ""
     },
-    "persistent-workspaces": {
-      "*": 5
+    "show-special": true,
+    "workspace-taskbar": {
+      "enable": true,
+      "format": "{icon}",
+      "icon-size": 18,
+      "on-click-window": "hyprctl dispatch focuswindow address:{address}"
     }
   },
   // Taskbar
