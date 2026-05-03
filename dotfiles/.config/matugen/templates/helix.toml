@@ -1,0 +1,192 @@
+# ── Syntax highlighting ───────────────────────────────────────────────────
+"type.builtin" = "primary"                   # main brand
+"type.enum" = "secondary"
+"constant.builtin" = "primary"
+"constant.numeric" = "tertiary"
+string = "accent_green"
+comment = "outline"
+"comment.block.documentation" = "doc_green"
+"comment.line.documentation" = "doc_green"
+"variable.builtin" = "primary"
+"variable.other.member" = "secondary"
+label = "secondary"
+keyword = "primary"
+function = "accent_blue"
+"function.macro" = "tertiary"
+tag = "accent_purple"
+
+"markup.heading" = { fg = "secondary", modifiers = ["italic"] }
+"markup.heading.marker" = "primary"
+"markup.list" = "primary"
+"markup.bold" = { modifiers = ["bold"] }
+"markup.italic" = { modifiers = ["italic"] }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+"markup.link" = { fg = "accent_blue", underline = { style = "line" } }
+"markup.raw" = { bg = "surface_variant" }        # secondary container
+
+"diff.plus" = "accent_green"                    # can also be tertiary
+"diff.minus" = "accent_red"                     # error tone
+"diff.delta" = "accent_blue"
+
+# ── Interface ─────────────────────────────────────────────────────────────
+"ui.background" = { fg = "on_surface", bg = "surface" }          # main surface
+"ui.gutter" = "surface_container_high"
+"ui.gutter.selected" = { fg = "on_surface_variant", bg = "surface_container_highest" }
+"ui.linenr" = "outline"                                           # border-like
+"ui.linenr.selected" = "on_surface"
+
+# Statusline: elevated surface
+"ui.statusline" = { bg = "surface_container_high" }
+"ui.statusline.inactive" = "outline"
+"ui.statusline.normal" = { fg = "on_primary", bg = "primary", modifiers = ["bold"] }
+"ui.statusline.insert" = { fg = "on_primary_container", bg = "primary_container", modifiers = ["bold"] }
+"ui.statusline.select" = { fg = "on_tertiary", bg = "tertiary", modifiers = ["bold"] }
+"ui.statusline.separator" = "outline"                             # divider
+
+"ui.bufferline" = "surface_variant"
+"ui.bufferline.active" = "on_surface"
+"ui.bufferline.background" = "surface_variant"
+
+# Popups use brightest surface
+"ui.popup" = { bg = "surface_bright" }
+"ui.popup.info" = { bg = "surface_bright" }
+
+"ui.picker.header" = "on_surface_variant"
+"ui.picker.header.column" = "on_surface_variant"
+"ui.picker.header.column.active" = "primary"
+
+"ui.window" = "outline_variant"                                    # split borders
+
+"ui.help" = { bg = "surface_bright" }
+
+"ui.text" = "on_surface"
+"ui.text.focus" = "accent_blue"
+"ui.text.inactive" = "outline"
+"ui.text.info" = "on_surface_variant"
+
+"ui.virtual" = "outline"
+"ui.virtual.ruler" = { bg = "surface_variant" }                   # subtle divider
+"ui.virtual.whitespace" = "outline_variant"
+"ui.virtual.indent-guide" = "surface_container"
+"ui.virtual.inlay-hint" = { fg = "on_surface_variant", bg = "surface_container" }
+"ui.virtual.wrap" = "outline_variant"
+"ui.virtual.jump-label" = { fg = "on_primary", bg = "primary" }
+
+# Menus – most elevated
+"ui.menu" = { bg = "surface_bright" }
+"ui.menu.selected" = { bg = "primary_container" }
+"ui.menu.scroll" = { fg = "outline_variant", bg = "surface_bright" }
+
+# Selections
+"ui.selection" = { fg = "on_primary_container", bg = "primary_container" }
+"ui.selection.primary" = { bg = "primary_fixed_dim" }
+
+# Highlight (picker preview)
+"ui.highlight" = { bg = "surface_container_highest" }
+"ui.highlight.frameline" = { bg = "error_container", modifiers = ["bold"] }
+
+# Cursor – use inverse primary for maximum contrast on any background
+"ui.cursor" = { fg = "surface", bg = "inverse_primary", modifiers = ["bold"] }
+"ui.cursor.normal" = { fg = "surface", bg = "inverse_primary", modifiers = ["bold"] }
+"ui.cursor.insert" = { fg = "surface", bg = "accent_blue", modifiers = ["bold"] }
+"ui.cursor.select" = { fg = "surface", bg = "tertiary", modifiers = ["bold"] }
+"ui.cursor.match" = { fg = "on_error", bg = "error", modifiers = ["bold"] }
+"ui.cursor.primary" = { fg = "surface", bg = "inverse_primary", modifiers = ["bold"] }
+"ui.cursor.primary.normal" = { fg = "surface", bg = "inverse_primary", modifiers = ["bold"] }
+"ui.cursor.primary.insert" = { fg = "surface", bg = "accent_blue", modifiers = ["bold"] }
+"ui.cursor.primary.select" = { fg = "surface", bg = "tertiary", modifiers = ["bold"] }
+
+"ui.cursorline.primary" = { bg = "surface_container_low" }
+"ui.cursorline.secondary" = { bg = "surface_container_low" }
+"ui.cursorcolumn.primary" = { bg = "surface_container_low" }
+"ui.cursorcolumn.secondary" = { bg = "surface_container_low" }
+
+# Diagnostics
+warning = "error"
+error = "error"
+info = "accent_blue"
+hint = "accent_green"
+
+"diagnostic" = { underline = { style = "curl" } }
+"diagnostic.hint" = { underline = { color = "accent_green", style = "curl" } }
+"diagnostic.info" = { underline = { color = "accent_blue", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "error_container", style = "curl" } }
+"diagnostic.error" = { underline = { color = "error", style = "curl" } }
+"diagnostic.unnecessary" = { modifiers = ["dim"] }
+"diagnostic.deprecated" = { modifiers = ["crossed_out"] }
+
+# Completion / hover documentation backgrounds (subtle primary container)
+"markup.normal.completion" = { bg = "primary_container", fg = "on_primary_container" }
+"markup.normal.hover" = { bg = "primary_container", fg = "on_primary_container" }
+
+[palette]
+# Surfaces (by elevation, lowest → highest)
+surface_dim = "{{colors.surface_dim.default.hex}}"
+surface = "{{colors.surface.default.hex}}"
+surface_bright = "{{colors.surface_bright.default.hex}}"                     # most elevated surfaces
+surface_container_lowest = "{{colors.surface_container_lowest.default.hex}}"
+surface_container_low = "{{colors.surface_container_low.default.hex}}"
+surface_container = "{{colors.surface_container.default.hex}}"
+surface_container_high = "{{colors.surface_container_high.default.hex}}"
+surface_container_highest = "{{colors.surface_container_highest.default.hex}}"
+surface_variant = "{{colors.surface_variant.default.hex}}"                   # secondary containers, dividers
+
+# On‑surface colors
+on_surface = "{{colors.on_surface.default.hex}}"                             # primary text on surfaces
+on_surface_variant = "{{colors.on_surface_variant.default.hex}}"             # secondary text, hints
+inverse_surface = "{{colors.inverse_surface.default.hex}}"
+inverse_on_surface = "{{colors.inverse_on_surface.default.hex}}"
+inverse_primary = "{{colors.inverse_primary.default.hex}}"                   # high‑contrast accent for cursors
+
+# Primary brand color
+primary = "{{colors.primary.default.hex}}"
+on_primary = "{{colors.on_primary.default.hex}}"
+primary_container = "{{colors.primary_container.default.hex}}"               # subtle highlighting
+on_primary_container = "{{colors.on_primary_container.default.hex}}"
+primary_fixed = "{{colors.primary_fixed.default.hex}}"
+primary_fixed_dim = "{{colors.primary_fixed_dim.default.hex}}"
+on_primary_fixed = "{{colors.on_primary_fixed.default.hex}}"
+on_primary_fixed_variant = "{{colors.on_primary_fixed_variant.default.hex}}"
+
+# Secondary accent
+secondary = "{{colors.secondary.default.hex}}"
+on_secondary = "{{colors.on_secondary.default.hex}}"
+secondary_container = "{{colors.secondary_container.default.hex}}"
+on_secondary_container = "{{colors.on_secondary_container.default.hex}}"
+secondary_fixed = "{{colors.secondary_fixed.default.hex}}"
+secondary_fixed_dim = "{{colors.secondary_fixed_dim.default.hex}}"
+on_secondary_fixed = "{{colors.on_secondary_fixed.default.hex}}"
+on_secondary_fixed_variant = "{{colors.on_secondary_fixed_variant.default.hex}}"
+
+# Tertiary – contrasting accent for balance
+tertiary = "{{colors.tertiary.default.hex}}"
+on_tertiary = "{{colors.on_tertiary.default.hex}}"
+tertiary_container = "{{colors.tertiary_container.default.hex}}"
+on_tertiary_container = "{{colors.on_tertiary_container.default.hex}}"
+tertiary_fixed = "{{colors.tertiary_fixed.default.hex}}"
+tertiary_fixed_dim = "{{colors.tertiary_fixed_dim.default.hex}}"
+on_tertiary_fixed = "{{colors.on_tertiary_fixed.default.hex}}"
+on_tertiary_fixed_variant = "{{colors.on_tertiary_fixed_variant.default.hex}}"
+
+# Error
+error = "{{colors.error.default.hex}}"
+on_error = "{{colors.on_error.default.hex}}"
+error_container = "{{colors.error_container.default.hex}}"
+on_error_container = "{{colors.on_error_container.default.hex}}"
+
+# Background and explicit misc
+background = "{{colors.background.default.hex}}"                             # app background
+on_background = "{{colors.on_background.default.hex}}"
+outline = "{{colors.outline.default.hex}}"                                   # borders, dividers
+outline_variant = "{{colors.outline_variant.default.hex}}"                   # subtle dividers (e.g. ruler)
+shadow = "{{colors.shadow.default.hex}}"
+scrim = "{{colors.scrim.default.hex}}"
+source_color = "{{colors.source_color.default.hex}}"
+surface_tint = "{{colors.surface_tint.default.hex}}"
+
+# Custom semantical shortcuts (still dynamic)
+accent_green = "{{colors.tertiary.default.hex}}"                             # distinct hue for strings
+accent_blue  = "{{colors.primary_fixed_dim.default.hex}}"                    # provides readable contrast
+accent_red   = "{{colors.error.default.hex}}"
+accent_purple = "{{colors.primary.default.hex}}"
+doc_green = "{{colors.primary_container.default.hex}}"                       # subtle, not overpowering
