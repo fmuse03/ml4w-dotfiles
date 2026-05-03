@@ -51,3 +51,8 @@ btop
 cargo
 eza
 libsecret
+
+playerctl
+wl-kbptr
+wlrctl
+wpctl
