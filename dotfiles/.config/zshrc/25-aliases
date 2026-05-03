@@ -30,6 +30,9 @@ alias quick='~/.config/ml4w/bin/ml4w-quicklinks'
 alias wallpaper='~/.config/ml4w/bin/ml4w-wallpaper'
 alias settings='ml4w-dotfiles-settings com.ml4w.dotfiles'
 
+alias -g -- --help='--help 2>&1 | bat --language=help --style=plain --paging=never --color always'
+alias cat='bat --style=plain --paging=never --color auto'
+
 # -----------------------------------------------------
 # ML4W Apps
 # -----------------------------------------------------

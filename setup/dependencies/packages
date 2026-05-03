@@ -52,6 +52,7 @@ cargo
 eza
 libsecret
 
+bat
 dragon-drop
 playerctl
 wl-kbptr
