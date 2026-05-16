@@ -28,13 +28,18 @@ keybinds=$(awk -F'[=#]' '
     BEGIN {
         # --- replacement table (order matters) ---
         num_patterns = 0
-        patterns[++num_patterns] = "\\$mainMod_L";              replacements[num_patterns] = "SUPER_L"
-        patterns[++num_patterns] = "\\$mainMod_R";              replacements[num_patterns] = "SUPER_R"
-        patterns[++num_patterns] = "\\$mainMod";                replacements[num_patterns] = "SUPER"
+        patterns[++num_patterns] = "\\$focusMod";               replacements[num_patterns] = "SUPER"
+        patterns[++num_patterns] = "\\$ctrlMod";                replacements[num_patterns] = "SUPER CTRL"
+        patterns[++num_patterns] = "\\$launchMod";              replacements[num_patterns] = "SUPER SHIFT"
+        patterns[++num_patterns] = "\\$killMod";                replacements[num_patterns] = "SUPER CTRL SHIFT"
 
         patterns[++num_patterns] = "bracketleft";               replacements[num_patterns] = "["
         patterns[++num_patterns] = "bracketright";              replacements[num_patterns] = "]"
         patterns[++num_patterns] = "comma";                     replacements[num_patterns] = ","
+        patterns[++num_patterns] = "equal";                     replacements[num_patterns] = "="
+        patterns[++num_patterns] = "minus";                     replacements[num_patterns] = "-"
+        patterns[++num_patterns] = "slash";                     replacements[num_patterns] = "/"
+        patterns[++num_patterns] = "semicolon";                 replacements[num_patterns] = ";"
 
         patterns[++num_patterns] = "XF86AudioRaiseVolume";      replacements[num_patterns] = "FN_VOLUME_UP"
         patterns[++num_patterns] = "XF86AudioLowerVolume";      replacements[num_patterns] = "FN_VOLUME_DOWN"
