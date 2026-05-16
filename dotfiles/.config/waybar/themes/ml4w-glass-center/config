@@ -18,7 +18,11 @@
         //"wlr/taskbar",
         //"group/quicklinks",
         //"custom/nowplaying",        
-        "custom/empty"
+        "custom/empty",
+        "temperature#cpu",
+        "temperature#gpu0junction",
+        "temperature#gpu0mem",
+        "temperature#nvme0"
     ],
     // Modules Center
     "modules-center": [
@@ -33,7 +37,6 @@
         "bluetooth",
         "network",
         "battery",
-        "group/hardware",
         "group/tools",
         "tray",
         "custom/notification",

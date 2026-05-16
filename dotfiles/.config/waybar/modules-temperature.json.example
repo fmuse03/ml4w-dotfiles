@@ -1,0 +1,26 @@
+{
+  "temperature#cpu": {
+    "hwmon-path-abs": "/sys/devices/0/hwmon",
+    "input-filename": "temp0_input",
+    "format": "󰁱  {temperatureC}",
+    "on-click": "~/.config/ml4w/settings/system-monitor.sh"
+  },
+  "temperature#gpu0junction": {
+    "hwmon-path-abs": "/sys/devices/0/hwmon",
+    "input-filename": "temp0_input",
+    "format": "󱔼  {temperatureC}",
+    "on-click": "~/.config/ml4w/settings/system-monitor.sh"
+  },
+  "temperature#gpu0mem": {
+    "hwmon-path-abs": "/sys/devices/0/hwmon",
+    "input-filename": "temp0_input",
+    "format": "󰂵  {temperatureC}",
+    "on-click": "~/.config/ml4w/settings/system-monitor.sh"
+  },
+  "temperature#nvme0": {
+    "hwmon-path-abs": "/sys/devices/0/hwmon",
+    "input-filename": "temp0_input",
+    "format": "󱛟  {temperatureC}",
+    "on-click": "~/.config/ml4w/settings/system-monitor.sh"
+  }
+}

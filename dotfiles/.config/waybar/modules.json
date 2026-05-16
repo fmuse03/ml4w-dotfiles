@@ -6,6 +6,9 @@
 //
 //
 {
+  "include": [
+    "~/.config/waybar/modules-temperature.json"
+  ],
   // Workspaces
   "hyprland/workspaces": {
     "on-scroll-up": "hyprctl dispatch workspace r-1",

@@ -1,3 +1,5 @@
+dotfiles/.config/waybar/modules-temperature.json
+
 __pycache__/
 bookmarks
 .idea
