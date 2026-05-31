@@ -1,0 +1,4 @@
+drivers=pulse
+hrtf=true
+[pulse]
+allow-moves=yes
