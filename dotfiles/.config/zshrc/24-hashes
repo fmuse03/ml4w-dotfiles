@@ -1,0 +1,10 @@
+hash -d .c=~/.config
+hash -d .dot=~/.config/hypr
+hash -d .d=~/.config/hypr/conf/keybindings/custom.conf
+hash -d .hypr=~/.config/ml4w
+hash -d .bind=~/dev/muse/fmuse03/ml4w-dotfiles
+hash -d .ml4w=~/dev/muse/fmuse03/ml4w-dotfiles/dotfiles
+hash -d c=~/dev/muse/fmuse03/ml4w-dotfiles/dotfiles/.config
+hash -d hypr=~/dev/muse/fmuse03/ml4w-dotfiles/dotfiles/.config/hypr
+hash -d bind=~/dev/muse/fmuse03/ml4w-dotfiles/dotfiles/.config/hypr/conf/keybindings/custom.conf
+hash -d ml4w=~/dev/muse/fmuse03/ml4w-dotfiles/dotfiles/.config/ml4w
