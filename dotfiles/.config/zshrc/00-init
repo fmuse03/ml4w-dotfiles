@@ -9,3 +9,8 @@ export EDITOR=helix
 export ZSH="$HOME/.oh-my-zsh"
 export PATH=$PATH:~/.cargo/bin/
 export PATH=$PATH:~/.local/bin/
+
+# -----------------------------------------------------
+# SSH Agent
+# -----------------------------------------------------
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
